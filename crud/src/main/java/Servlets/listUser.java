@@ -32,13 +32,13 @@ public class listUser extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		JOptionPane.showMessageDialog( null, "doGet  in Servlet listUser");
+		//JOptionPane.showMessageDialog( null, "doGet  in Servlet listUser");
 		executeQuery(request, response);
 		}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		JOptionPane.showMessageDialog( null, "doPost in Servlet listUser");
+		//JOptionPane.showMessageDialog( null, "doPost in Servlet listUser");
 		executeQuery(request, response);
 		}
 	
