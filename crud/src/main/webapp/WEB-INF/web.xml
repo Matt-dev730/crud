@@ -4,6 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>updateUser</servlet-name>
+  	<display-name>updateUser</display-name>
+  	<description></description>
+  	<servlet-class>Servlets.updateUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateUser</servlet-name>
+  	<url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
   <welcome-file>Login.html</welcome-file>
   </welcome-file-list>

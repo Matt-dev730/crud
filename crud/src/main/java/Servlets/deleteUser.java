@@ -1,6 +1,8 @@
 package Servlets;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,25 +12,28 @@ import javax.servlet.http.HttpServletResponse;
 import Beans.Utilisateur;
 import DAO.LireDAO;
 
-@WebServlet("/deleteUser")
+@WebServlet(name = "deleteUser", urlPatterns = "/deleteUser")
 public class deleteUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public deleteUser() {
-        super();
-      
-    }
-
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Utilisateur UD = LireDAO.getRecordById(request.getParameter("id"));
 		
-		Utilisateur u = new Utilisateur();
+		int i = LireDAO.Delete(UD);
 		
-		LireDAO.Delete(u);
-	}
+		if (i == 1) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("listUser");
+				rd.forward(request, response);
+		}
+		
+		if (i == 0) {
+			
+			RequestDispatcher rd = request.getRequestDispatcher("Erreur.jsp");
+				rd.forward(request, response);
+		}
 
+    }
 }

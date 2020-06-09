@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored = "false" %>
+
 <!DOCTYPE html>
 	
 	<html>
@@ -11,18 +14,17 @@
 	
 		<body>
 	
+	<!-- 	context.setAttribute("userDAO",userDAO); -->
 			<h1>Edit Form</h1>
 	
-					<form action="update.jsp" >
-	
-					<input type="hidden" name="id" value="${ param.id }"/>
-							      
-						Prenom    : <input type="text" name="prenom" value="${param.prenom}"/> <br>
-						Nom       : <input type="text" name="nom" value='${ param.nom }'/><br>
-						Motdepasse       : <input type="text" name="motdepasse" value='${ param.motdepasse }'/><br>
+					<form action="update" method="post">
+						id       		: <input type="text" name="id" value="${userDAO.getId()}"/><br>	      
+						Nom       		: <input type="text" name="Nom" value="${userDAO.getNom()}"/><br>
+						Prenom    		: <input type="text" name="Prenom" value="${userDAO.getPrenom()}"/> <br>
+						Motdepasse      : <input type="text" name="Mp" value="${userDAO.getMp()}"/><br>
 						
-					<input type="submit" value="Éditer"/>
+						<input type="submit" value="Éditer"/>
 		        
-		    </form>
+		   			 </form>
 		</body>
 	</html>

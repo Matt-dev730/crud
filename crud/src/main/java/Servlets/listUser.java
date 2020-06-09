@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -58,6 +59,8 @@ public class listUser extends HttpServlet {
 			liste = LireDAO.getAllRecords();
 		   
 			request.setAttribute("list",liste);
+		    ServletContext context = getServletContext();
+			context.setAttribute("listDao",liste);
 		    RequestDispatcher rd = request.getRequestDispatcher("ViewUser.jsp");
 		    rd.forward(request, response);
 	}

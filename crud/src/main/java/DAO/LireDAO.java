@@ -27,10 +27,11 @@ public class LireDAO {
 		 try {
 				Class.forName("com.mysql.jdbc.Driver");
 				System.out.println("Driver ok");
-			    //String url = "jdbc:mysql://127.0.0.1:3306/crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"; 
-				//conn = DriverManager.getConnection(url,"root","");
-				String url = "jdbc:mysql://mysql-matt-dev730.alwaysdata.net:3306/matt-dev730_crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"; 
-				conn = DriverManager.getConnection(url,"204987_user", "User@123");
+				String url = "jdbc:mysql://127.0.0.1:3306/crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"; 
+				conn = DriverManager.getConnection(url,"root","");
+			
+				//String url = "jdbc:mysql://mysql-matt-dev730.alwaysdata.net:3306/matt-dev730_crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
+				//conn = DriverManager.getConnection(url,"204987_user", "User@123");
 				System.out.println("connexion ok");
 		  
 		  }
@@ -108,7 +109,7 @@ public class LireDAO {
 					u.setId(rs.getString("id"));
 					u.setNom(rs.getString("nom"));
 					u.setPrenom(rs.getString("prenom"));
-					u.setMp(rs.getString("mot de passe"));
+					u.setMp(rs.getString("motdepasse"));
 				}
 			}
 			catch(SQLException e)

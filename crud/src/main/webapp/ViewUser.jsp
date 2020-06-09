@@ -22,6 +22,8 @@
 						
 						<tr>
 							
+							<th>Id</th>
+							
 							<th>Prenom</th>
 							
 							<th>Nom</th>
@@ -38,7 +40,7 @@
 					
 					<tbody>
 							
-						<c:forEach items="${liste}" var="u">
+						<c:forEach items="${list}" var="u">
 							
 							<tr>
 							
@@ -50,9 +52,9 @@
 							
 							 	<td>${u.getMp()}</td>
 							
-								<td><a href="/adduserserv?id=${u.id}">Éditer</a></td>
+								<td><a href="update?id=${u.id}">Éditer</a></td>
 							
-								<td><a href="delete.jsp?id=${u.id}">Supprimer</a></td>
+								<td><a href="deleteUser?id=${u.id}">Supprimer</a></td>
 							
 							</tr>
 							
