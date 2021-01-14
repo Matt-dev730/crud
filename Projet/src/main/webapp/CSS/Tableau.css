@@ -1,0 +1,25 @@
+aside table
+	{
+		margin-top : 125px;
+		margin-left : 1080px;
+		border-radius : 10px;
+		background : rgba(0,0,0,.8);
+		box-shadow : 0 15px 25px rgba(0,0,0,.5);
+	}
+	
+th
+	{
+		margin-top : 20px;
+		padding : 20px;
+	}
+
+td
+	{
+		margin-top : 20px;
+		padding : 20px;
+	}
+
+tr a
+	{
+	color : #fff;
+	}

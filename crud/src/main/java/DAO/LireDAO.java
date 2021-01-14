@@ -25,19 +25,19 @@ public class LireDAO {
 		
 			//nom: marley  password: marleyb123
 		 try {
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				System.out.println("Driver ok");
-				//String url = "jdbc:mysql://127.0.0.1:3306/crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"; 
-				//conn = DriverManager.getConnection(url,"root","");
+				String url = "jdbc:mysql://127.0.0.1:3306/crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"; 
+				conn = DriverManager.getConnection(url,"root","");
 			
-				String url = "jdbc:mysql://mysql-matt-dev730.alwaysdata.net:3306/matt-dev730_crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
-				conn = DriverManager.getConnection(url,"204987_user", "User@123");
+				//String url = "jdbc:mysql://mysql-matt-dev730.alwaysdata.net:3306/matt-dev730_crud?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
+				//conn = DriverManager.getConnection(url,"204987_user", "User@123");
 				System.out.println("connexion ok");
 		  
 		  }
 		 catch(SQLException | ClassNotFoundException  e)
 			{
-				System.out.println(e.getMessage());
+				e.printStackTrace();
 			}
 		
 		 if (conn != null )

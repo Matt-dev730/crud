@@ -27,12 +27,12 @@ public class updateUser extends HttpServlet {
 		
 			LireDAO.getConnection();
 			
-			Utilisateur userDAO = null;
+			Utilisateur user = null;
 			   
-			userDAO = LireDAO.getRecordById(id);
+			user = LireDAO.getRecordById(id);
 			
 				ServletContext context = getServletContext();
-					context.setAttribute("userDAO",userDAO);
+					context.setAttribute("user",user);
 			
 		
 			

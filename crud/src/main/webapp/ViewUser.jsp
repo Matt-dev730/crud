@@ -40,17 +40,17 @@
 					
 					<tbody>
 							
-						<c:forEach items="${list}" var="u">
+						<c:forEach items="${list}" var="user">
 							
 							<tr>
 							
-							 	<td>${u.getId()}</td>
+							 	<td>${user.getId()}</td>
 							
-							 	<td>${u.getNom()}</td>
+							 	<td>${user.getNom()}</td>
 							
-							 	<td>${u.getPrenom()}</td>
+							 	<td>${user.getPrenom()}</td>
 							
-							 	<td>${u.getMp()}</td>
+							 	<td>${user.getMp()}</td>
 							
 								<td><a href="update?id=${u.id}">Éditer</a></td>
 							

@@ -1,0 +1,78 @@
+body
+	{
+		margin : 0;
+		padding : 0;
+	}
+	
+article
+	{
+		height: auto;
+	}
+
+.mail
+	{
+		text-align: center;
+	}
+
+.mail input
+	{
+		border-radius: 2em;
+		position: relative;
+		top: 10px;
+		margin-top: 10px;
+		width: 20%;
+	}
+	
+.form h3
+	{
+		text-align: center;
+		margin-top: 2%;
+	}
+
+textarea.requete
+	{
+		width: 20%;
+		height: 200px;
+		margin-top: 20px;
+		border-radius: 10px;
+		resize: none
+	}
+	
+.mail #submit
+	{
+		margin-top: 25px;
+		margin-bottom: 50px;
+		border-radius:10px;
+		width: auto;
+		height: 35px;
+		background-color: #ba00e1d4;
+		color: #fff;
+	}
+
+footer
+	{
+		bottom: 0;
+	}
+	
+@media screen and (max-width: 1000px)
+	{
+		.form
+			{
+				width: 100%;
+			}
+			
+		.mail
+			{
+				width: 100%;
+			}
+			
+		.mail input
+			{
+				width: 100%;
+			}
+			
+		textarea.requete
+			{
+				width: 100%;
+			}
+	}

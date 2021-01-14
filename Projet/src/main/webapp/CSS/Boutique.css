@@ -1,0 +1,21 @@
+article
+	{
+		height: 200%;
+	}
+	
+#grid
+	{
+		text-align: center;
+		display: grid;
+		position: relative;
+		
+	}
+	
+.sidebar
+	{
+		background: #c24585;
+		position: absolute;
+		left: 0;
+		height: 100%;
+		width: 15%;
+	}

@@ -1,0 +1,22 @@
+.carousel
+	{
+		background-color: grey;
+		width: 50%;
+		height: auto;
+		left: 25%;
+	}
+	
+@media screen and (max-width: 700px)
+	{
+		.containt
+			{
+				height: auto;
+			}
+			
+		.carousel
+			{
+				width: 100%;
+				left: 0;
+				top: 100%;
+			}
+	}
